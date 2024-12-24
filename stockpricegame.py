@@ -101,7 +101,7 @@ def open_main_game_window():
 
     def plot_update(ax, times, prices):
         ax.clear()  
-        ax.set_xlim(0, 300)  # 設置 x 軸範圍
+        ax.set_xlim(0, 180)  # 設置 x 軸範圍
         ax.set_ylim(43, 58)  # 設置 y 軸範圍
         ax.set_xlabel('Time (seconds)')
         ax.set_ylabel('Stock Price')
