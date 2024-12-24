@@ -5,9 +5,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from tkinter import messagebox
 
 # 模擬遊戲玩家狀態
-player_cash = 200  # 初始現金
-player_stock = 2  # 初始股票
-player_loan = 0  # 初始貸款
+player_cash = 200  
+player_stock = 2  
+player_loan = 0  
 
 def main():
     global root
@@ -113,10 +113,9 @@ def open_main_game_window():
 
         # 顯示當前時間和股價
         ax.text(0.05, 1.02, f'Time: {times[-1]:.1f} sec\nPrice: {prices[-1]:.2f}', transform=ax.transAxes)
-
-        # 更新 nowprice 為最新股價
+        
         global nowprice
-        nowprice = prices[-1]  # 將圖形中的最後一個股價設為 nowprice
+        nowprice = prices[-1]  
 
         # 更新畫布
         canvas.draw()
@@ -286,7 +285,7 @@ def final_page():
     summary_label.pack()
     interest_rate=1.04
     dividend=random.choice([1, 5])
-    total_cash=(player_cash - player_loan * interest_rate) + (player_stock * nowprice) + (player_stock * dividend)
+    total_cash=(player_cash - player_loan * interest_rate)*interest_rate + (player_stock * nowprice) + (player_stock * dividend)
 
     # 顯示玩家最終數據
     final_info = f"Final Amount: ${total_cash:.2f}"
