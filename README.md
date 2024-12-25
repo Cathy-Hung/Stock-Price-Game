@@ -47,6 +47,7 @@ for t in range(1, total_time + 1):
     prices.append(current_price)
     plot_update(ax, times, prices)
 plt.show()
+```
 然後將其提供給 ChatGPT，請其協助改寫成可以匯入到 tkinter 遊戲介面中的版本。
 
 3. 隨後，我自行撰寫了處理玩家購買股票並即時更新資產資訊的程式碼，並在 ChatGPT 的輔助下修改，使其能即時變動數據，且加入了錯誤提示的彈跳視窗功能。同時，我以購買股票的程式碼改寫售出股票的程式碼。
